@@ -33,7 +33,7 @@
 - `--mechanism`: Differential privacy mechanism. Default:laplace. Options:laplace, gaussian
 - `--epsilon`: Privacy Budget. Default:1
 - `--delta`: Privacy Parameter. Default:5e-6
-
+- `--norm_clip`: Clip parameter. Default:0.15
 ### KSSLDP Parameters
 - `--beta`: sample k/d. Default: 0.02
 - `--np_rate`: n/np. Default: 1
