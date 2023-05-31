@@ -3,12 +3,7 @@
 ## Requirement
 - Python
 - PyTorch
-
-## Dataset
-- Mnist, Fashion Mnist and Cifar-10
-
-## Model
-- MLP and CNN
+- torchvision
 
 ## Run
 - NP-FL on Mnist MLP
@@ -20,10 +15,28 @@
 ## Options
 
 ### Model Parameters
-
+- `--model`: Default:mlp. Options:mlp,cnn,lm 
+- `--dataset`: Default:mnist. Options:mnist,fmnist,cifar
+- `--optimizer`: Default:sgd. Options:sgd,dpsgd,ldpsgd,kssldpsgd
+- `--epochs`:global communication rounds. Default:20
+- `--lr`:learning rate. Default:0.01
+- `--seed`: Default:2023
+- `--gpu`: Default: 0 
 ### Federated Parameters
+- `--iid`:distribution of data. Default: 1
+- `--num_users`:number of all users. Default:1000
+- `--frac`:fractions of users tobe used. Default:0.1
+- `--local_ep`:local epochs. Default:10
+- `--local_bs`:local batch. Default:10
 
 ### DP Parameters
+- `--mechanism`: Differential privacy mechanism. Default:laplace. Options:laplace, gaussian
+- `--epsilon`: Privacy Budget. Default:1
+- `--delta`: Privacy Parameter. Default:5e-6
+
+### KSSLDP Parameters
+- `--beta`: sample k/d. Default: 0.02
+- `--np_rate`: n/np. Default: 1
 
 # Result
 
